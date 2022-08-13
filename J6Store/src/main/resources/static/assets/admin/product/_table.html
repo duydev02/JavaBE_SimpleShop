@@ -1,0 +1,67 @@
+<div class="card mt-4">
+	<h4 class="card-header">PRODUCT LIST</h4>
+	<div class="card-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">Date</th>
+					<th scope="col">Image</th>
+					<th scope="col">Category</th>
+					<th scope="col">Available?</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in pager.items">
+					<td>{{item.id}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.price | number: 2}}</td>
+					<td>{{item.createDate | date: 'dd-MM-yyyy'}}</td>
+					<td>{{item.image}}</td>
+					<td>{{item.category.name}}</td>
+					<td>{{item.available?'Yes':'No'}}</td>
+					<td>
+						<div>
+							<button ng-click="edit(item)" class="btn btn-warning" style="width: 42px;">
+								<i class="fa-solid fa-pen"></i>
+							</button>
+							<button ng-click="delete(item)" class="btn btn-danger" style="width: 42px;">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="card-body text-center">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+				<li class="page-item">
+					<button ng-click="pager.first()" class="page-link" aria-label="First">
+						<span aria-hidden="true">&laquo;</span>
+					</button>
+				</li>
+				<li class="page-item">
+					<button ng-click="pager.prev()" class="page-link" aria-label="Previous">
+						<span aria-hidden="true">&lsaquo;</span>
+					</button>
+				</li>
+				<li class="page-item"><a class="page-link" aria-current="page">{{pager.page + 1}} of {{pager.count}}</a></li>
+				<li class="page-item">
+					<button ng-click="pager.next()" class="page-link" aria-label="Next">
+						<span aria-hidden="true">&rsaquo;</span>
+					</button>
+				</li>
+				<li class="page-item">
+					<button ng-click="pager.last()" class="page-link" aria-label="Last">
+						<span aria-hidden="true">&raquo;</span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <div class="alert alert-info text-center cart-info" role="alert">
+        <a th:href="@{/cart/view}">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            {{cart.count}} items - ${{cart.amount | number: 2}}
+        </a>
+    </div>
+</div>

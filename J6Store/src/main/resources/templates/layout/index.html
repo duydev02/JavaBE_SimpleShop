@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+    <title>Java 6 Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d766b365b6.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" th:href="@{/assets/favicon/favicon-shiba.png}" />
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+</head>
+
+<body class="container" ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+    <header class="row">
+        <a th:href="@{/}">
+        	<img th:src="@{/assets/images/header.png}" width="250px" alt="FPT Polytechnic">
+        </a>
+    </header>
+    <nav class="row mb-4">
+        <div th:replace="/layout/_menu.html"></div>
+    </nav>
+    <div class="row">
+        <article class="col-sm-9">
+            <div th:replace="${main}"></div>
+        </article>
+        <aside class="col-sm-3">
+            <div th:replace="/layout/_cart-info.html"></div>
+            <div th:replace="/layout/_category.html"></div>
+        </aside>
+    </div>
+    <footer class="row">
+        <div class="d-flex justify-content-center align-items-center">
+        	<div>FPT Polytechnic &copy; 2022. All rights reserved.</div>	
+        </div>
+    </footer>
+
+	<script src="/assets/js/shopping-cart-app.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

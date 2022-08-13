@@ -1,0 +1,18 @@
+<div xmlns:th="http://www.thymeleaf.org">
+	<div class="input-group rounded">
+		<input type="search" class="form-control rounded" placeholder="Search"
+			aria-label="Search" aria-describedby="search-addon" 
+			style="border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;"/>
+		<button type="button" class="btn btn-primary">
+			<i class="fas fa-search"></i>
+		</button>
+	</div>
+	<div class="list-group mt-4">
+		<a class="list-group-item active fs-5 fw-bold"> <i
+			class="fa-solid fa-list"></i> Danh mục
+		</a> <a th:href="@{|/product/list|}"
+			class="list-group-item list-group-item-action">Tất cả</a> <a
+			th:each="c: ${cates}" th:href="@{|/product/list?cid=${c.id}|}"
+			class="list-group-item list-group-item-action">[[${c.name}]]</a>
+	</div>
+</div>

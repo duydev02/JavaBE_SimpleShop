@@ -1,0 +1,8 @@
+${AnsiColor.BLUE}   ___           ${AnsiColor.RED}            _   
+${AnsiColor.BLUE}  / _ \__ ____ __${AnsiColor.RED}__ _  ___  (_)__
+${AnsiColor.BLUE} / // / // / // /${AnsiColor.RED}  ' \/ _ \/ /_ /
+${AnsiColor.BLUE}/____/\_,_/\_, /${AnsiColor.RED}_/_/_/\___/_//__/
+${AnsiColor.BLUE}          /___/${AnsiColor.RED}                  
+
+${AnsiColor.MAGENTA}:: ${AnsiColor.RED}Hoàng Minh Duy ${AnsiColor.MAGENTA}- ${AnsiColor.BLUE}Duymoiz ${AnsiColor.MAGENTA}${AnsiColor.BRIGHT_BLUE}:: Running Spring Boot ${spring-boot.version} :: (～o￣3￣)～
+

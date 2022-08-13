@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+    <main class="order-list">
+        <div class="card">
+			<h4 class="card-header">YOUR ORDERS PURCHASED</h4>
+			<div class="card-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Order No.</th>
+							<th scope="col">Order Date</th>
+							<th scope="col">Shipping Address</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="order, index: ${orders}">
+							<th scope="row">[[${index.index + 1}]]</th>
+							<td>[[${order.id}]]</td>
+							<td>[[${order.createDate}]]</td>
+							<td>[[${order.address}]]</td>
+							<td>
+								<a th:href="@{|/order/detail/${order.id}|}" class="btn btn-primary">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<div class="card mt-4">
+	<h4 class="card-header">PRODUCT EDITION</h4>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<label for="image">
+					<img ng-src="{{'/assets/images/' + form.image}}" alt="Product image"
+						style="max-width: 100%; max-height: 100%;">
+				</label>
+			</div>
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="name" class="form-label">Name</label>
+							<input ng-model="form.name" type="text" class="form-control" name="name" id="name" placeholder="Name?">
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="price" class="form-label">Price</label>
+							<input ng-model="form.price" type="text" class="form-control" name="price" id="price" placeholder="Price?">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="image" class="form-label">Image</label>
+							<input ng-model="form.image" type="file" class="form-control" name="image" id="image" placeholder="Image?"
+								onchange="angular.element(this).scope().imageChanged(this.files)">
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="category" class="form-label">Category</label>
+							<select ng-model="form.category.id" class="form-select" aria-label="Default select example" name="category" id="category">
+								<option ng-repeat="c in cates" ng-value="c.id">{{c.name}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="date" class="form-label">Create Date</label>
+							<input ng-model="form.createDate" type="date" class="form-control" name="date" id="date" placeholder="Create Date?">
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<div class="mb-3">
+							<label for="" class="form-label d-block">Available?</label>
+							<div class="form-check me-4" style="display: inline-block;">
+								<input ng-model="form.available" ng-value="true" class="form-check-input" type="radio" name="available" id="available-yes">
+								<label class="form-check-label" for="available-yes">
+									Yes
+								</label>
+							</div>
+							<div class="form-check" style="display: inline-block;">
+								<input ng-model="form.available" ng-value="false" class="form-check-input" type="radio" name="available" id="available-no">
+								<label class="form-check-label" for="available-no">
+									No
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<button ng-click="create()" class="btn btn-primary">
+			<i class="fa-solid fa-plus"></i>
+			Create
+		</button>
+		<button ng-click="update()" class="btn btn-success">
+			<i class="fa-solid fa-pen"></i>
+			Update
+		</button>
+		<button ng-click="delete(form)" class="btn btn-danger">
+			<i class="fa-solid fa-xmark"></i>
+			Delete
+		</button>
+		<button ng-click="reset()" class="btn btn-info">
+			<i class="fa-solid fa-note-sticky"></i>
+			Reset
+		</button>
+	</div>
+</div>

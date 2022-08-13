@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+header a {
+	padding: 10px 0;
+}
+
+.cart-info a {
+	color: #000;
+	text-decoration: none;
+  	transition: 0.3s;
+  	padding: 10px;
+  	border-radius: 5px;
+}
+
+.cart-info a:hover {
+	background-color: #3dda85;
+}
+
+.cart-info a i {
+	font-size: 20px;
+}
+
+.list .card-header-heading {
+	overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   line-height: 1.5rem;        /* fallback */
+   height: 3rem;       /* fallback */
+}
+
+.list .card-body img {
+	transition: transform .2s;
+}
+
+.list .card-body img:hover {
+	transform: scale(1.1);
+}
+
+.detail .samekind .card-header,
+.checkout .card-header,
+.order-detail .card-header,
+.order-list .card-header {
+	color: navy;
+}
+
+.detail .samekind ul li a {
+	color: #000;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.detail .samekind ul li a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	margin-top: 40px !important;
+	border-top: 2px solid orange;
+	height: 100px;
+	background-color: #f5f5f5;
+}
+
+/* FORM LOGIN */
+.divider:after, .divider:before {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: #eee;
+}
+
+.h-custom {
+	height: calc(100% - 73px);
+}
+
+@media ( max-width : 450px) {
+	.h-custom {
+		height: 100%;
+	}
+}
+
+.btn-floating {
+    width: 2.3125rem;
+    height: 2.3125rem;
+}
+
+.btn-floating, [class*=btn-outline-].btn-floating {
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+}
+
+.security-login-message {
+	margin-top: 60px;
+	font-size: 24px;
+	background: #0d6efd;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+/*  */
