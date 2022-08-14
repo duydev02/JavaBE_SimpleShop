@@ -5,3 +5,4 @@
 *.css linguist-detectable=false  
 *.scss linguist-detectable=false  
 *.xml linguist-detectable=false
+*.sql linguist-detectable=false
